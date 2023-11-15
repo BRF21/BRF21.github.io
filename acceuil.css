@@ -301,10 +301,15 @@ nav .fly-item {
         background-color: #be9782;
         box-shadow: 0px 0px 10px #3b3634;
         z-index: 1;
+        display: none;
     }
     nav .mega li {
         line-height: 1.5em;
     }
+    nav li.has-child:hover .mega {
+      display: block;
+    }
+    
     nav .mega .wrapper { 
         display: flex;
     } 
