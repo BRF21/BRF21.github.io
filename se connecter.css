@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(152, 209, 238);
+  flex-direction: column;
+  flex-grow: 1;
+  background-image: url('img/Untitled-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité ici */
+  z-index: -1;
+  }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 20px 100px;
+  width: 100%;
+  display: flex;
+  backdrop-filter: blur(20px);
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  max-height: 80px;
+  max-width: auto;
+  margin-left: 0px;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  margin-left: 40px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.navigation .btnlogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s ease, height .2s ease;
+  overflow: hidden;
+  transform: scale(0);
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active{
+  height: 620px;
+}
+
+.form-box {
+  width: 100%;
+  padding: 35px;
+}
+
+.wrapper .form-box.login {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transform: translateX(400px);  
+}
+
+.wrapper.active .form-box.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+.souvenir-oublie {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 500;
+  margin: -5px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.souvenir-oublie label input {
+  accent-color: #162938;
+  margin-right: 10px;  
+}
+
+.souvenir-oublie a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.souvenir-oublie a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 35px;
+  background: #162938;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+.login-register {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+.login-register a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(70px)
+}
+
+/* Ajoutez ce code à la fin de votre CSS actuel */
+
+/* Adaptation pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    background-color: rgb(152, 209, 238);
+  }
+
+  header {
+    left: 0;
+    padding: 20px;
+  }
+
+  header img {
+    max-height: 60px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .navigation a {
+    margin: 10px 0;
+  }
+
+  .btnlogin-popup {
+    margin-left: 0;
+  }
+
+  .wrapper {
+    width: 90%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    transform: scale(1);
+    padding: 20px;
+  }
+
+  .wrapper.active {
+    height: auto;
+  }
+
+  .form-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .input-box {
+    margin: 15px 0;
+  }
+
+  .input-box input {
+    font-size: 0.9em;
+  }
+
+  .input-box .icon {
+    font-size: 1em;
+  }
+
+  .souvenir-oublie {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  .btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .login-register {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+
+
