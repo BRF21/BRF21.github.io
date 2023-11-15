@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion à E-Chambu</title>
+  <link rel="stylesheet" href="se connecter.css">
+</head>
+<body>
+  <header>
+    <img src="img/E-Chambu.png">
+      <nav class="navigation">
+      <a href="acceuil.html">Accueil</a>
+      <a href="#">Produits</a>
+      <a href="#">Panier</a>
+      <button class="btnlogin-popup">Se connecter</button>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="form-box login">
+      <h2>Connexion</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="email" required>
+          <label for="email">E-mail</label> 
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="password" required>
+          <label for="password">Mot de passe</label> 
+        </div>
+        <div class="souvenir-oublie">
+          <label><input type="checkbox">Se souvenir de moi</label> 
+          <a href="#">Mot de passe oublié?</a>
+        </div>
+        <button type="submit" class="btn">Se connecter</button>
+        <div class="login-register">
+          Pas encore inscrit ? 
+          <a href="#" class="register-link">Créer un compte</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>S'incrire</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="text" required>
+          <label>Nom</label> 
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="text" required>
+          <label>Prénom</label> 
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="text" required>
+          <label>Adresse</label> 
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="email" required>
+          <label for="email">E-mail</label> 
+        </div>
+        <div class="input-box">
+          <span class="icon"></span>
+          <input type="password" required>
+          <label for="password">Mot de passe</label> 
+        </div>
+        <div class="souvenir-oublie">
+          <label><input type="checkbox">J'accepte les termes & conditions d'utilisation</label> 
+        </div>
+        <button type="submit" class="btn">Créer un compte</button>
+        <div class="login-register">
+          Avez-vous déjà un compte?
+          <a href="#" class="login-link">Se connecter</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        &copy; E-Chambu 
+    </div>
+    Tous droits réservés.
+  </footer>
+
+  <script src="se connecter.js"></script>
+</body>
+</html>
