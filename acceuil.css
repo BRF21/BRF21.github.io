@@ -260,6 +260,10 @@ nav .fly-item {
     z-index: 1;
 }
 
+nav .méga {
+    display: none;
+}
+
 
 
 
@@ -274,7 +278,7 @@ nav .fly-item {
 /*-----------------------------------------------------*/
 /*-----------------------------------------------------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 920px) {
     .container {
         padding: 0 2em;
     }
@@ -306,12 +310,12 @@ nav .fly-item {
     nav .mega li {
         line-height: 1.5em;
     }
-    nav li.has-child:hover .mega {
-      display: block;
-    }
-    
     nav .mega .wrapper { 
         display: flex;
     } 
     
+    nav li.has-child:hover .mega {
+        display:block;
+        
+    }
 }
